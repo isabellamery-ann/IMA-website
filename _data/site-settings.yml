@@ -1,0 +1,32 @@
+seo: 
+  site_name: IMA Webdesign
+  title: Default SEO Title
+  description: 
+  keywords: 
+  social_image: 
+  author: 
+  favicon_image: 
+social: 
+  instagram_username:
+  facebook_url:
+  twitter_username: 
+design: 
+  orange-text_color: '#e4af46'
+  yellow-text_color: '#f4f0a8'
+  purple-text_color:  'rgba(147,145,239,0.5)'
+  pink-text_color: '#df6f81'
+  brown-text_color: '#cd6600'
+  background-grey_color: '#e2e0e1'
+  logo-orange_color: '#ff602c'
+  dark-text_color: 'rgb(60,60,65)'
+  medium-text_color: 'rgb(90,90,95)'
+  light-text_color: '#f7f5f3'
+  featured-text_color: 'red'
+  dark_color: 'rgb(60,60,65)'
+  medium_color: '#ede8e4'
+  light_color: '#f7f5f3'
+  v-light_color: '#f9f9f9'
+  featured_color: '#6495ed'
+  accent_color: 'rgb(167, 74, 74)'
+  
+

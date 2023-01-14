@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        
+        {% include head.html %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <title>{{page.title}}</title>
-</head>
+    </head>
 
+<!--this is the body - all the actual content on the homepage -->
 <body>
-    {{content}}
-</body>
 
+    {% include inline-styles.html %}
+    
+    <!--------------- header banner ------------------------>
+   {% include site-header.html %}
+
+    {{ content }}
+
+     <!------------- footer ---------------->
+    {% include site-footer.html %}
+        
+
+    <!---- scripts ---->
+
+    {% include body-scripts.html %}
+
+</body>
 </html>
