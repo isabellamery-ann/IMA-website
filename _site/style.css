@@ -42,7 +42,6 @@ html {
     transform: rotate(270deg)translate(-500px)translateY(-165px);
     transform-origin: 36% 177%;
     letter-spacing: .2rem;
-    position: fixed;
     font-size: 8.5rem;
     font-family: 'Brown Sugar',sans-serif;
     position: fixed;
@@ -50,12 +49,12 @@ html {
 .rotated-text {
     text-align: right;
     transform: rotate(270deg)translate(-500px)translateY(-165px);
-    transform-origin: 55% 70%;
+    transform-origin: 55% -176%;
     letter-spacing: .2rem;
-    position: fixed;
     font-size: 2.5rem;
     font-family: 'GrandSlang',sans-serif;
-    position: fixed;
+    position: absolute;
+    z-index: 2;
 }
 
 /* ---------- Negative Space Utility Classes  ------------------ */ 
@@ -286,6 +285,20 @@ body {
     text-decoration: none;
     border-bottom: 1px solid;
   }
+
+  .enquire-now {
+        border: 2px solid ; 
+        text-decoration: none;
+        text-transform: lowercase;
+        padding: 0.8rem 3rem; 
+        display: inline-block;
+        margin-top: 10rem;
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        z-index: 100;
+    
+  }
   
   /* suggested additional styles 
   - .button-inverted, .button-subtle, .button-lg  */
@@ -456,7 +469,7 @@ body {
 @-webkit-keyframes cycle {
     0% { top: 0px; }
     4% { top: 0px; }
-    16% { top: 0px; opacity:1; z-index:0; }
+    16% { top: 0px; opacity:1; z-index:-1; }
     21% { top: 0px; opacity: 0; z-index: -1; }
     92% { top: 0px; opacity: 0; z-index: 0; }
     96% { top: 0px; opacity: 0; }
@@ -467,7 +480,7 @@ body {
     16% { top: 0px; opacity: 0; }
     20% { top: 0px; opacity: 1; }
     24% { top: 0px; opacity: 1; }
-    36% { top: 0px; opacity: 1; z-index: 0; }
+    36% { top: 0px; opacity: 1; z-index: -1; }
     41% { top: 0px; opacity: 0; z-index: -1; }
     100%{ top: 0px; opacity: 0; z-index: -1; }
 }
@@ -486,7 +499,7 @@ body {
     56% { top: 0px; opacity: 0; }
     60% { top: 0px; opacity: 1; }
     64% { top: 0px; opacity: 1; }
-    76% { top: 0px; opacity: 1; z-index: 0; }
+    76% { top: 0px; opacity: 1; z-index: -1; }
     81% { top: 0px; z-index: -1; }
     100%{ top: 0px; z-index: -1; }
 }
@@ -495,7 +508,7 @@ body {
     76% { top: 0px; opacity: 0; }
     80% { top: 0px; opacity: 1; }
     84% { top: 0px; opacity: 1; }
-    96% { top: 0px; opacity: 1; z-index: 0; }
+    96% { top: 0px; opacity: 1; z-index: -1; }
 }
 
 
