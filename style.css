@@ -32,7 +32,7 @@ html {
 .logo {
     text-decoration: none;
     font-size: 8.5rem;
-    color: rgba(255,96,44);
+    color: var(--yellow-text);
     font-family: 'Brown Sugar', sans-serif;
     z-index: 0;
 }
@@ -56,6 +56,43 @@ html {
     position: absolute;
     z-index: 2;
 }
+
+.intro-text {
+    position: absolute;
+    padding-top: 50%;
+    padding-left: 62%;
+    z-index: 100;
+}
+
+.intro-quote {
+    line-height: 1.1;
+    margin-right: -6rem;
+    padding-right: 8rem;
+    margin-bottom: 10%;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 1rem;
+}
+
+
+.stand-out {
+    font-size: 8vw;
+    line-height: 1.1;
+    border-bottom: 3px solid;
+    margin-bottom: 10%;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 1rem;
+    margin-right: -25rem;
+    padding-right: 0rem;
+    padding-left: 11rem;
+    padding-top: 25rem;
+    padding-left: 15rem;
+    margin-left: 1rem;
+    color: #f7f5f3;
+}
+
+        
 
 /* ---------- Negative Space Utility Classes  ------------------ */ 
 /* maximum width of that sections - at sørge for at indholdet altid er en pæn størrelse på forskellige devices */
@@ -178,6 +215,9 @@ html {
   opacity: 0.5;
 } 
 
+.bg-split-white-tan {
+    background: linear-gradient(180deg, white 50%, #edeced 50%); }
+
 /* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
 
 a.bg-image { display: block;}
@@ -242,12 +282,16 @@ body {
   .text-light     { color: var(--light-text);}
   .subtle         { opacity: 0.8;     }
   .subtitle       { font-size: 0.8rem; }
+  .bold           { font-weight: bold;
+                    font-size: 10vw;
+                    letter-spacing: -0.2vw;}
 
   .pink-text {color: var(--pink-text);}
   .brown-text {color: var(--brown-text)}
   .logo-orange {color: var(--logo-orange)}
   .purple-text {color: var(--purple-text)}
   .yellow-text { color: var(--yellow-text)}
+  .white-text { color: var(--light-text);}
   
   
   /* ------------ Buttons & Links ------------ */
@@ -323,13 +367,14 @@ body {
     cursor: pointer;
     padding: 0 0.5rem; 
     display: inline-block; 
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 0.8; 
     margin-top: -0.7rem; 
     right: 1rem ;
     top: 2.4rem; 
     z-index: 1002000!important; /* 11 */
     position: fixed;
+    text-transform: uppercase;
       
   } 
 
@@ -418,20 +463,25 @@ body {
 
 /* ----------------- Slideshow ------------- */
 
+.slideshow {
+    padding: 10%; 
+}
+
 .css3ad-container {
     overflow: hidden;
     width:336px;
     height: 280px;
 }
 .css3ad-first, .css3ad-second, .css3ad-third, .css3ad-fourth, .css3ad-fifth {
-     width: 800px;
-     height:800px;
+     width: 1200px;
+     height: 1200px;
      position: absolute;
      overflow: hidden;
-     top:0px;
+     top:100px;
      cursor:pointer;
      -webkit-transition: all 0s linear;
      transition: all 0s linear;
+     margin-top: -32px;
 }
 
 .css3ad-first {
@@ -465,11 +515,10 @@ body {
    -webkit-animation: cyclefive 25s linear infinite;
 }
 
-
 @-webkit-keyframes cycle {
     0% { top: 0px; }
     4% { top: 0px; }
-    16% { top: 0px; opacity:1; z-index:-1; }
+    16% { top: 0px; opacity:1; z-index:0; }
     21% { top: 0px; opacity: 0; z-index: -1; }
     92% { top: 0px; opacity: 0; z-index: 0; }
     96% { top: 0px; opacity: 0; }
@@ -480,7 +529,7 @@ body {
     16% { top: 0px; opacity: 0; }
     20% { top: 0px; opacity: 1; }
     24% { top: 0px; opacity: 1; }
-    36% { top: 0px; opacity: 1; z-index: -1; }
+    36% { top: 0px; opacity: 1; z-index: 0; }
     41% { top: 0px; opacity: 0; z-index: -1; }
     100%{ top: 0px; opacity: 0; z-index: -1; }
 }
@@ -499,7 +548,7 @@ body {
     56% { top: 0px; opacity: 0; }
     60% { top: 0px; opacity: 1; }
     64% { top: 0px; opacity: 1; }
-    76% { top: 0px; opacity: 1; z-index: -1; }
+    76% { top: 0px; opacity: 1; z-index: 0; }
     81% { top: 0px; z-index: -1; }
     100%{ top: 0px; z-index: -1; }
 }
@@ -508,7 +557,7 @@ body {
     76% { top: 0px; opacity: 0; }
     80% { top: 0px; opacity: 1; }
     84% { top: 0px; opacity: 1; }
-    96% { top: 0px; opacity: 1; z-index: -1; }
+    96% { top: 0px; opacity: 1; z-index: 0; }
 }
 
 
