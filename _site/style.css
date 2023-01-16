@@ -32,7 +32,7 @@ html {
 .logo {
     text-decoration: none;
     font-size: 8.5rem;
-    color: var(--yellow-text);
+    color: var(--purple-text);
     font-family: 'Brown Sugar', sans-serif;
     z-index: 0;
 }
@@ -85,10 +85,10 @@ html {
     padding-bottom: 1rem;
     margin-right: -25rem;
     padding-right: 0rem;
-    padding-left: 11rem;
+    padding-left: 6rem;
     padding-top: 25rem;
     padding-left: 15rem;
-    margin-left: 1rem;
+    margin-left: 11rem;
     color: #f7f5f3;
 }
 
@@ -293,7 +293,10 @@ body {
   .yellow-text { color: var(--yellow-text)}
   .white-text { color: var(--light-text);}
   
-  
+  .about-text p {
+    font-size: 1.5rem;
+    color: #bdbdbd;
+  }
   /* ------------ Buttons & Links ------------ */
   a {
       color: inherit;
@@ -474,7 +477,7 @@ body {
 }
 .css3ad-first, .css3ad-second, .css3ad-third, .css3ad-fourth, .css3ad-fifth {
      width: 1200px;
-     height: 1200px;
+     height: 1218px;
      position: absolute;
      overflow: hidden;
      top:100px;
@@ -560,6 +563,75 @@ body {
     96% { top: 0px; opacity: 1; z-index: 0; }
 }
 
+
+
+/* ------------ Slick Slider for Portfolio ---------------- */
+
+
+/* Slider */
+.testimonial-slider-container {
+    padding: 5%;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .slider-item {
+    padding: 1rem;
+    display: none;
+  }
+  
+  .slider-item:first-child {
+    display: block;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next::before, .slick-prev::before {
+      font-family: inherit;
+      font-size: 20px;
+      line-height: 1;
+      opacity: .75;
+      color: rgb(90,90,90);
+  }
+  
+  .slick-dots {
+    left: 0;
+    bottom: 10px;
+    /*  Without this the padding on the parent affects the centering of the dots. Do not delete.    */
+  }
+  
+  .slick-dots li,
+  .slick-dots li button {
+    width: 10px;
+  }
+  
+  .slick-dots li button::before {
+    color: rgb(90,90,90);
+  }
+  
+  .slick-dots li.slick-active button::before {
+    color: rgb(90,90,90);
+  }
+  
+  
+  /* Slider Text Styles  */
+  
+  .slider-item p {
+    text-align: justify;
+    font-family: 'Playfair Display';
+    font-size: 1.5rem;
+  }
+  
+  
+  @media(max-width: 36em){
+    .slider-item p { font-size: 1.1rem;}
+  }
 
 /* ------------ Contact Forms  ----------------------- */
 
