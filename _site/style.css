@@ -101,6 +101,11 @@ html {
 .capped-width-narrow    { max-width: 1000px; margin: auto; }
 .capped-width-v-narrow  { max-width: 800px;  margin: auto; }
 
+/* Flip / change the order of the grids */
+.flex-flip-alternate:nth-child(even) {
+    flex-direction: row-reverse; 
+ }
+
 
 .tall-100 { min-height: 100vh; }
 .tall-90  { min-height: 90vh; }
@@ -216,7 +221,10 @@ html {
 } 
 
 .bg-split-white-tan {
-    background: linear-gradient(180deg, white 50%, #edeced 50%); }
+    background: linear-gradient(180deg, white 50%, #e2e0e1 50%); 
+    min-height: -1vh;
+}
+    
 
 /* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
 
@@ -234,6 +242,11 @@ a.bg-image { display: block;}
 .bg-pos-l { background-position: left; }
 .bg-pos-r { background-position: right; }
 
+/* ----------- Video Styles ----------- */
+video {
+    height: 100vh;
+    width: 100vh;
+}
 
 /* ------------ Typography Styles ----------------------- */
 
@@ -283,7 +296,7 @@ body {
   .subtle         { opacity: 0.8;     }
   .subtitle       { font-size: 0.8rem; }
   .bold           { font-weight: bold;
-                    font-size: 10vw;
+                    font-size: 15vw;
                     letter-spacing: -0.2vw;}
 
   .pink-text {color: var(--pink-text);}
@@ -297,13 +310,24 @@ body {
     font-size: 1.5rem;
     color: #bdbdbd;
   }
+
+  .usp {
+    color: #bdbdbd;
+
+  }
+
+  .usp h2 {
+    font-size: 7.5rem;
+  }
+
+  
   /* ------------ Buttons & Links ------------ */
   a {
       color: inherit;
   }
   
   a:hover {
-    color: var(--pink-text); 
+    color: var(--logo-orange); 
   }
   
   p a {
@@ -312,7 +336,7 @@ body {
   }
   
   p a:hover { 
-    color: var(--pink-text); 
+    color: var(--logo-orange); 
     
   }
   
@@ -325,7 +349,7 @@ body {
   }
   
   .button:hover {
-      color: var(--pink-text);
+      color: var(--yellow-text);
   }
   
   .subtle-button {
@@ -334,16 +358,16 @@ body {
   }
 
   .enquire-now {
-        border: 2px solid ; 
+        border: 2px solid black; 
         text-decoration: none;
         text-transform: lowercase;
-        padding: 0.8rem 3rem; 
+        padding: 1rem 1rem; 
         display: inline-block;
-        margin-top: 10rem;
-        color: white;
-        margin-bottom: 1rem;
-        font-size: 3rem;
-        z-index: 100;
+        margin-top: 5rem;
+        color:  #f7f5f3;
+        margin-bottom: 0rem;
+        position: relative;
+        background-color: black;
     
   }
   
@@ -363,7 +387,7 @@ body {
       text-transform: capitalize;
   }
   nav a:hover {
-    color: var(--pink-text);
+    color: var(--light-text);
   }
 
   .hamburger-button {  
@@ -378,6 +402,7 @@ body {
     z-index: 1002000!important; /* 11 */
     position: fixed;
     text-transform: uppercase;
+    color: #9d9a9a;
       
   } 
 
@@ -398,8 +423,8 @@ body {
     text-decoration: none; 
     display: block; 
     padding: 5vh 5%;
-    color: inherit; 
-    font-size: 1.5rem; 
+    color: var(--purple-text); 
+    font-size: 3em; 
     
 }
 
@@ -500,7 +525,7 @@ body {
     -webkit-animation: cycletwo 25s linear infinite;
 }
 .css3ad-third {
-    background:url("/images/slideshow/IMA-webdesign-14.jpg") no-repeat;
+    background:url("/images/slideshow/IMA-webdesign-16.jpg") no-repeat;
     animation: cyclethree 25s linear infinite;
     background-position: 50% 50%;
     -webkit-animation: cyclethree 25s linear infinite;
@@ -568,7 +593,6 @@ body {
 /* ------------ Slick Slider for Portfolio ---------------- */
 
 
-/* Slider */
 .testimonial-slider-container {
     padding: 5%;
     max-width: 900px;
@@ -591,13 +615,17 @@ body {
   .slick-prev {
     left: 10px;
   }
+
+  .slick-next::before {
+    content: '→';
+  }
   
   .slick-next::before, .slick-prev::before {
       font-family: inherit;
       font-size: 20px;
       line-height: 1;
       opacity: .75;
-      color: rgb(90,90,90);
+      color: #3c3c3c;
   }
   
   .slick-dots {
