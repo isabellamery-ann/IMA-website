@@ -34,7 +34,7 @@ html {
     font-size: 8.5rem;
     color: var(--purple-text);
     font-family: 'Brown Sugar', sans-serif;
-    z-index: 0;
+    z-index: 5;
 }
 
 .rotated {
@@ -86,7 +86,7 @@ html {
     margin-right: -25rem;
     padding-right: 0rem;
     padding-left: 6rem;
-    padding-top: 25rem;
+    padding-top: 8rem;
     padding-left: 15rem;
     margin-left: 11rem;
     color: #f7f5f3;
@@ -145,6 +145,11 @@ html {
 .padded-b-0 { padding-bottom: 0; }
 .padded-l-0 { padding-left: 0; }
 .padded-r-0 { padding-right: 0; }
+
+.padded-v-tall {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 
 /* Margin Utility Classes */ 
 
@@ -259,6 +264,7 @@ body {
     font-family: 'GrandSlang', serif;  /* Add your font here */ 
     color: var(--dark-text);
     background-color: var(--bg-grey);
+    overflow-x: hidden; /* Fjerne horizontal scrolling fra siden */
   }
   
   h2, h3, h4, h5, h6 {
@@ -313,12 +319,30 @@ body {
 
   .usp {
     color: #bdbdbd;
+    background-color: #f7f5f3;
 
   }
 
   .usp h2 {
     font-size: 7.5rem;
   }
+
+  .border-left {
+    margin-top: 10rem;
+    border-left: 2px solid;
+  }
+  
+/* for typing animation */  
+#typed {
+    font-size: 2rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+    font-family: 300;
+    color: #e0e0e0;
+}
+
+
 
   
   /* ------------ Buttons & Links ------------ */
@@ -327,7 +351,7 @@ body {
   }
   
   a:hover {
-    color: var(--logo-orange); 
+    color: var(--purple-text); 
   }
   
   p a {
@@ -336,7 +360,7 @@ body {
   }
   
   p a:hover { 
-    color: var(--logo-orange); 
+    color: var(--purple-text); 
     
   }
   
@@ -365,10 +389,35 @@ body {
         display: inline-block;
         margin-top: 5rem;
         color:  #f7f5f3;
-        margin-bottom: 0rem;
+        margin-bottom: 8rem;
         position: relative;
         background-color: black;
+        font-family: inherit;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        cursor: pointer;
     
+    
+  }
+  .enquire-now:hover {
+    color: var(--yellow-text)
+  }
+
+
+  .visit-site {
+    border: 1px solid var(--purple-text);
+    text-transform: lowercase;
+    padding: 1rem 2rem; 
+    display: inline-block;
+    margin-top: 1rem;
+    color:  var(--purple-text);
+    margin-bottom: 1rem;
+    position: relative;
+    background-color: none;
+    font-weight: 800;
+    margin-left: 13rem;
+    font-size: 1.3rem;
+
   }
   
   /* suggested additional styles 
@@ -387,7 +436,7 @@ body {
       text-transform: capitalize;
   }
   nav a:hover {
-    color: var(--light-text);
+    color: var(--yellow-text);
   }
 
   .hamburger-button {  
@@ -621,7 +670,7 @@ body {
   }
   
   .slick-next::before, .slick-prev::before {
-      font-family: inherit;
+      font-family: 'GrandSlang', sans-serif;
       font-size: 20px;
       line-height: 1;
       opacity: .75;
@@ -630,9 +679,12 @@ body {
   
   .slick-dots {
     left: 0;
-    bottom: 10px;
+    bottom: 133px;
+    padding-right: 12rem;
+
     /*  Without this the padding on the parent affects the centering of the dots. Do not delete.    */
   }
+
   
   .slick-dots li,
   .slick-dots li button {
@@ -647,12 +699,15 @@ body {
     color: rgb(90,90,90);
   }
   
+  .slick-slide img {
+    margin-left: ;
+  }
   
   /* Slider Text Styles  */
   
   .slider-item p {
     text-align: justify;
-    font-family: 'Playfair Display';
+    font-family: 'GrandSlang';
     font-size: 1.5rem;
   }
   
@@ -662,8 +717,129 @@ body {
   }
 
 /* ------------ Contact Forms  ----------------------- */
+.contact-form {
+   
+    background-color: #dddbdc;
 
+}
 
+.banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/');
+  }
+
+.contact-form h2, p {
+    color: #717171;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+}
+
+.contact-form p {
+    font-size: 1.5rem;
+}
+.input-text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    display: block;
+    margin: 0;
+    width: 100%;
+    border: none;
+      border-bottom-color: currentcolor;
+      border-bottom-style: none;
+      border-bottom-width: medium;
+    border-bottom: 2px solid #5f5a5a;
+    transition: all .5s;
+    padding: .7rem 0 .5rem;
+    background-color: #0000;
+  }
+  .input-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    font-family: Source Sans Pro;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color: #5a5a5a;
+  }
+  .input-text:placeholder-shown + .input-label {
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  .floating-input {
+    position: relative;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+  }
+              
+input, textarea {
+    border-style: solid;
+    border: 2px solid rgb(200, 200, 205);
+    padding: 0.8em;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    vertical-align: top;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #e67e22;
+    /* featured color */
+  } 
+  
+  textarea {
+    min-height: 7em;
+  }
+  
+  input[type="submit"] {
+    width: auto;
+    display: block;
+  }
+  
+  form [class*=col-] {
+    padding: 5px;
+  }
+  
+  .email-signup input {
+    width: 30%;
+    display: inline-block;
+    max-width: 250px;
+    margin-top:1rem;
+  }
+  
+  .email-signup .button-solid {
+    font-size: 1rem;
+        border: 2px solid black; 
+        text-decoration: none;
+        text-transform: lowercase;
+        padding: 1rem 1rem; 
+        display: inline-block;
+        margin-top: 5rem;
+        color:  #f7f5f3;
+        margin-bottom: 8rem;
+        position: relative;
+        background-color: black;
+  }
+
+  form .button {
+    width:100%;
+  }
+    @media(max-width:768px) {
+     .email-signup input {
+       width: 100%;
+       max-width: 100%;
+     }
+   }
+  
+              
+            
 
 /* ------------ Responsive Styles ----------------------- */
 

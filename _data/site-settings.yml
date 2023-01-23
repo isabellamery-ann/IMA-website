@@ -16,7 +16,7 @@ design:
   purple-text_color:  'rgba(147,145,239,0.5)'
   pink-text_color: '#df6f81'
   brown-text_color: '#cd6600'
-  background-grey_color: '#e2e0e1'
+  background-grey_color: '#dddbdc'
   logo-orange_color: '#ff602c'
   dark-text_color: 'rgb(60,60,65)'
   medium-text_color: 'rgb(90,90,95)'

@@ -10,14 +10,30 @@
             
           });
     
-          // Animate on scroll - activate
-          AOS.init({
-            duration: 500 //values from 0 to 3000, with step 50ms
-          });
-    });
+         
+          //Animate scroll plugin
 
+          AOS.init({
+            offset: 250, // offset (in px) from the original trigger point
+            delay: 50, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+
+          });
     
-    
+            // Typing Animation
+        /* var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          typeSpeed: 10,
+          startDelay: 500,
+          backSpeed: 10,
+          backDelay: 1000,
+          smartBackspace: true,
+          loop: true,
+          loopCount: Infinity
+        });*/
+
     
     lightGallery(document.getElementById('lightgallery'), {
       speed: 500,
@@ -43,4 +59,5 @@
       pauseOnHover: true,   // When true means the autoplay pauses when hovering
       pauseOnDotsHover: true // Pauses the autoplay when hovering over the dots
     });
-    
+
+  });

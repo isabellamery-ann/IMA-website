@@ -3,7 +3,7 @@
     <head>
         
         <!--- The title for SEO & browser tabs---->
-<title> IMA Webdesign</title>
+<title> Contact</title>
 
 <!--Viewport meta tag for respnsive-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,15 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
+
 <!-- Lightgallery for pop-ups - husk altid før vores custom stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery-bundle.min.css" integrity="sha512-7xAjdVc23n18sYEAZKa79271IRUS1XzylIyJ8feyXvjrbbr4oId92993EiGTAP63Ob6KplRnmbNmBOg6bpLjYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!---  slick-slider for gallery or testimonials CSS  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!--- My own custom stylesheet ---->
 <link rel="stylesheet" href="/style.css">
@@ -44,7 +51,7 @@
         --purple-text: rgba(147,145,239,0.5);
         --pink-text: #df6f81;
         --brown-text: #cd6600;
-        --bg-grey: #e2e0e1;
+        --bg-grey: #dddbdc;
         --logo-orange: #ff602c;
         --dark-text: rgb(60,60,65) ;
         --medium-text: rgb(90,90,95);
@@ -94,7 +101,80 @@
 
 </header>
 
-    
+                
+              
+<section class="padded grid banner tall-50" style="background-image: url('/images/IMA-webdesign-7.png'); margin-top: -2rem;">
+  <div class="col-6_sm-12 grid padded" style="margin-left: 9rem;">
+    <div class="col-6_sm-12 border-left padded-1 tall-70" > 
+      <div class="padded-1 paddded-v-tall"> 
+        <h4> AGENCY DIRECTOR </h4>
+        <p> Isabella M. Andersen </p>
+        <p> Tel: <a href="tel:+4540816296"> +45 40 81 62 96 </a></p>
+        <p> Email: <a href="mailto:isabella.mery-ann@live.dk"> isabella.mery-ann@live.dk</a> </p>
+        
+      </div>
+
+    </div>
+  </section>
+  
+
+
+    <!--- Contact Form -->
+    <section id="form" class="padded-10 grid contact-form">
+      <form class="capped-width" action="https://formspree.io/f/xayznbkq" method="POST">
+        <div class="grid padded">
+          <div class="col-12 relative">
+            <h2 class="center" > We would love to hear from you... </h2>
+          </div>
+          <div class="col-10_sm-12 padded-2"> 
+            <div class="floating-input">
+              <input class="input-text" name="name" placeholder="Your Name" required type="text">
+              <label class="input-label"> Your Name </label>
+            </div>
+            <div class="floating-input">
+              <input class="input-text" name="email" placeholder="Your Email" required type="text">
+              <label class="input-label"> Your Email Adress </label>
+            </div>
+            <div class="floating-input">
+              <input class="input-text" name="mobile" placeholder="Your Mobile Number" required type="text">
+              <label class="input-label"> Your Mobile Number </label>
+            </div>
+          </div>
+
+          <div class="grid padded">
+            <div class="col-12 relative">
+              <h2 class="left"> Your Business </h2>
+            </div>
+
+            <div class="col-10_sm-12 padded-2">
+              <div class="floating-input">
+                <textarea class="input-text" name="about-your-brand" placeholder="Describe your brand or business (in danish or english)" required=""></textarea>
+                <label class="input-label"> Your Brand</label>
+              </div>
+
+              <div class="floating-input">
+                <textarea class="input-text" name="services-needed" placeholder="How can I help you and your business? (in danish or english)" required=""></textarea>
+                <label class="input-label"> Your Message</label>
+              </div>
+
+              <input class="enquire-now" type="submit" value="SUBMIT">
+
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+
+
+
+    </section>
+
+  
+
+
+            
+          
 
      <!------------- footer ---------------->
     <footer class="grid bg-purple padded purple-text justify-end items-end z-\[-1\]">
@@ -137,12 +217,13 @@
 <!---  slick-slider for gallery or testimonials JS  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
 
-<!---  slick-slider for gallery or testimonials CSS  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-   
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   
+
+
+   <!--- Typing anmiation javascript file -->
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+
+
    <!-- our custom javascript file --> 
    <script src="/scripts.js"></script>
 
